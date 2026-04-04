@@ -48,4 +48,16 @@ public abstract class Animal {
     }
 
     public abstract String toString();
+
+    // Or do it like this and use super.toString() + String.format("Whatever the specific animal needs")
+//    public String toString() {
+//        String danger ="";
+//            if (this.isEndangered() == true) {
+//            danger = "an endangered";
+//        } else {
+//            danger = "not an endangered";
+//        }
+//        String report = String.format("I am a %dlb %s that lives in the %s. I am %s species.", this.getMaxWeight(), this.getSpecies(), this.getHabitat(), danger);
+//        return report;
+//    }
 }

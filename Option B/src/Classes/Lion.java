@@ -17,7 +17,13 @@ public class Lion extends Animal{
     }
 
     public String toString() {
-        String report = "";
+        String danger ="";
+        if (this.isEndangered() == true) {
+            danger = "an endangered";
+        } else {
+            danger = "not an endangered";
+        }
+        String report = String.format("I am a %dlb %s that lives in the %s. I am %s species. My tails's length is %d CM.", this.getMaxWeight(), this.getSpecies(), this.getHabitat(), danger, this.tailsLength);
 
         return report;
     }
