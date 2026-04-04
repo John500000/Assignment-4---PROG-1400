@@ -1,4 +1,5 @@
 import java.awt.*;
+import GUI.MainFrame;
 
 public class Main {
 
