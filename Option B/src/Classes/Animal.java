@@ -49,7 +49,7 @@ public abstract class Animal {
 
     public abstract String toString();
 
-    // Or do it like this and use super.toString() + String.format("Whatever the specific animal needs")
+    // Or do it like this and use report = super.toString() + String.format("")
 //    public String toString() {
 //        String danger ="";
 //            if (this.isEndangered() == true) {
