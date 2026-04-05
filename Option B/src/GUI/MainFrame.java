@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
         setTitle("Abc Zoo App");
         setLayout(new CardLayout());
 
-
+        ChoosePanel chosseScrenn = new ChoosePanel();
 
     }
 }
