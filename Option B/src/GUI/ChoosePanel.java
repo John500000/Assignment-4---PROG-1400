@@ -5,10 +5,10 @@ import java.awt.*;
 
 public class ChoosePanel extends JPanel {
 
-    private JRadioButton rdoCat;
-    private JRadioButton rdoDog;
-    private JRadioButton rdoLion;
-    //private JLabel myName;
+//    private JRadioButton rdoCat;
+//    private JRadioButton rdoDog;
+//    private JRadioButton rdoLion;
+//    private JLabel myName;
 
     public ChoosePanel() {
 
@@ -17,9 +17,13 @@ public class ChoosePanel extends JPanel {
         setLayout(null);
         setVisible(true);
 
-        add(rdoCat);
-        add(rdoDog);
-        add(rdoLion);
+//        add(rdoCat);
+//        add(rdoDog);
+//        add(rdoLion);
+
+        JRadioButton rdoCat = new JRadioButton("Cat");
+        JRadioButton rdoDog = new JRadioButton("Dog");
+        JRadioButton rdoLion = new JRadioButton("Lion");
 
         rdoCat.setBounds(50,200,150,50);
         rdoDog.setBounds(50,250,150,50);
