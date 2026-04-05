@@ -21,13 +21,14 @@ public class ChoosePanel extends JPanel {
 //        add(rdoDog);
 //        add(rdoLion);
 
+
         JRadioButton rdoCat = new JRadioButton("Cat");
         JRadioButton rdoDog = new JRadioButton("Dog");
         JRadioButton rdoLion = new JRadioButton("Lion");
 
-        rdoCat.setBounds(50,200,150,50);
-        rdoDog.setBounds(50,250,150,50);
-        rdoLion.setBounds(50,250,150,50);
+        rdoCat.setBounds(50, 150, 150, 45);
+        rdoDog.setBounds(50, 210, 150, 45);
+        rdoLion.setBounds(50, 270, 150, 45);
 
         ButtonGroup grpAnimalRadios = new ButtonGroup();
         grpAnimalRadios.add(rdoCat);
@@ -37,9 +38,14 @@ public class ChoosePanel extends JPanel {
 
         JLabel myName = new JLabel("Done by John Warren. W0241228.");
         myName.setFont(myFont);
-        myName.setBounds(50, 350, 250, 50);
+        myName.setBounds(100, 350, 350, 50);
 
+        add(myName);
+        add(rdoCat);
+        add(rdoDog);
+        add(rdoLion);
 
+        setBackground(Color.green);
 
     }
 

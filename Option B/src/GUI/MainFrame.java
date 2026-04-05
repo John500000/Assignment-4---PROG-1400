@@ -11,11 +11,11 @@ public class MainFrame extends JFrame {
     public MainFrame() {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(200,200,750,750);
+        setBounds(200,200,500,650);
         setTitle("Abc Zoo App");
         setLayout(new CardLayout());
 
-        ChoosePanel chosseScreen = new ChoosePanel();
-        add(chosseScreen);
+        ChoosePanel chooseScreen = new ChoosePanel();
+        add(chooseScreen);
     }
 }
