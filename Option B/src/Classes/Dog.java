@@ -17,8 +17,7 @@ public class Dog extends Animal{
     }
 
     public String toString() {
-        String report = "";
-
+        String report = super.toString() + String.format(" My dog breed is: %s", this.getBreed());
         return report;
     }
 }

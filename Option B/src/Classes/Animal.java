@@ -47,17 +47,16 @@ public abstract class Animal {
         this.isEndangered = isEndangered;
     }
 
-    public abstract String toString();
+//    public abstract String toString();
 
-    // Or do it like this and use report = super.toString() + String.format("")
-//    public String toString() {
-//        String danger ="";
-//            if (this.isEndangered() == true) {
-//            danger = "an endangered";
-//        } else {
-//            danger = "not an endangered";
-//        }
-//        String report = String.format("I am a %dlb %s that lives in the %s. I am %s species.", this.getMaxWeight(), this.getSpecies(), this.getHabitat(), danger);
-//        return report;
-//    }
+    //Or do it like this and use report = super.toString() + String.format("")
+    public String toString() {
+        String danger ="";
+            if (this.isEndangered()) {
+            danger = "an endangered";
+        } else {
+            danger = "not an endangered";
+        }
+        return String.format("I am a %dlb %s that lives in the %s. I am %s species.", this.getMaxWeight(), this.getSpecies(), this.getHabitat(), danger);
+    }
 }
