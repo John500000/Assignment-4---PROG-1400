@@ -71,4 +71,8 @@ public class DisplayPanel extends JPanel {
         bigString.setText(c);
 
     }
+
+    public JTextArea getBigString() {
+        return bigString;
+    }
 }

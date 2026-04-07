@@ -50,7 +50,8 @@ public class MainFrame extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 displayScreen.genDisplay(theDog.getSpecies(),theDog.getMaxWeight(),theDog.toString());
                 displayScreen.getImageLabel().setIcon(theDog.getDogPic());
-                displayScreen.setBackground(Color.darkGray);
+                displayScreen.setBackground(Color.lightGray);
+                //displayScreen.getBigString().setBackground(Color.LIGHT_GRAY);
                 chooseScreen.setVisible(false);
                 displayScreen.setVisible(true);
             }
