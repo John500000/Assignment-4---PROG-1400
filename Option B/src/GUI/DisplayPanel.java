@@ -7,6 +7,7 @@ public class DisplayPanel extends JPanel {
 
     private JTextField speciesText;
     private JTextField foodText;
+    private JLabel imageLabel;
 
     public DisplayPanel() {
 
@@ -30,12 +31,18 @@ public class DisplayPanel extends JPanel {
         foodText.setBounds(220,100,150,50);
         foodText.setFont(myFont);
 
+        imageLabel = new JLabel();
+        imageLabel.setBounds(30,125,150,150);
+
         add(speciesLabel);
         add(foodLabel);
         add(speciesText);
         add(foodText);
+        add(imageLabel);
 
     }
 
-
+    public JLabel getImageLabel() {
+        return imageLabel;
+    }
 }
