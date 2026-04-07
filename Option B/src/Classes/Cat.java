@@ -23,7 +23,7 @@ public class Cat extends Animal {
     }
 
     public String toString() {
-        String report = super.toString() + String.format(" My whiskers length is: %d CM", this.getWhiskersLength());
+        String report = super.toString() + String.format(" My whiskers length is %d CM", this.getWhiskersLength());
         return report;
     }
 

@@ -16,6 +16,8 @@ public class MainFrame extends JFrame {
     //private Cat changeCatImage = null;
 
 
+
+
     public MainFrame() {
 
         theCat = new Cat("Cat", "Mountains", 70, true, 10);
@@ -23,7 +25,7 @@ public class MainFrame extends JFrame {
         theLion = new Lion("Lion","Jungle",800,true,100);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(200,200,500,650);
+        setBounds(200,200,500,600);
         setTitle("Abc Zoo App");
         setLayout(new CardLayout());
 
@@ -35,7 +37,9 @@ public class MainFrame extends JFrame {
         JRadioButton rdoCat = chooseScreen.getRdoCat();
         rdoCat.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                displayScreen.genDisplay(theCat.getSpecies(),theCat.getMaxWeight(),theCat.toString());
                 displayScreen.getImageLabel().setIcon(theCat.getCatPic());
+                displayScreen.setBackground(Color.orange);
                 chooseScreen.setVisible(false);
                 displayScreen.setVisible(true);
             }
@@ -44,7 +48,9 @@ public class MainFrame extends JFrame {
         JRadioButton rdoDog = chooseScreen.getRdoDog();
         rdoDog.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                displayScreen.genDisplay(theDog.getSpecies(),theDog.getMaxWeight(),theDog.toString());
                 displayScreen.getImageLabel().setIcon(theDog.getDogPic());
+                displayScreen.setBackground(Color.darkGray);
                 chooseScreen.setVisible(false);
                 displayScreen.setVisible(true);
             }
@@ -53,10 +59,34 @@ public class MainFrame extends JFrame {
         JRadioButton rdoLion = chooseScreen.getRdoLion();
         rdoLion.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                displayScreen.genDisplay(theLion.getSpecies(),theLion.getMaxWeight(),theLion.toString());
                 displayScreen.getImageLabel().setIcon(theLion.getLionPic());
+                displayScreen.setBackground(Color.yellow);
                 chooseScreen.setVisible(false);
                 displayScreen.setVisible(true);
             }
         });
+
+        JButton goBack = displayScreen.getBackBtn();
+        goBack.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                displayScreen.setVisible(false);
+                chooseScreen.setVisible(true);
+            }
+        });
+
+
+    }
+
+    public Cat getTheCat() {
+        return theCat;
+    }
+
+    public Dog getTheDog() {
+        return theDog;
+    }
+
+    public Lion getTheLion() {
+        return theLion;
     }
 }

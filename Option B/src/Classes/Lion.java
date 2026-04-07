@@ -23,7 +23,7 @@ public class Lion extends Animal{
     }
 
     public String toString() {
-        String report = super.toString() + String.format(" My tail length is: %d CM", this.getTailsLength());
+        String report = super.toString() + String.format(" My tail length is %d CM", this.getTailsLength());
         return report;
     }
 
